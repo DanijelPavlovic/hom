@@ -1,10 +1,10 @@
 start:
 	 php -S localhost:8000 -t public
 
-start-db:
+db-start:
 	docker compose up -d
 
-stop-db:
+db-stop:
 	docker compose down
 
 migrations:

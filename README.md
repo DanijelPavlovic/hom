@@ -4,13 +4,13 @@
 
 1. Create an `.env` from `.env.example`
 2. Run `composer install` command
-3. Run `make start-db` command to build the database inside a docker container
+3. Run `make db-start` command to build the database inside a docker container
 4. Run `make migrations` command to create the tables inside the DB
 5. Run `make start` to run start the app
 
 <br>
 
-> **Note:** To stop the DB container run the `make stop-db` command.
+> **Note:** To stop the DB container run the `make db-stop` command.
 
 ### Api Documentation
 
