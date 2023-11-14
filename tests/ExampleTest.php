@@ -54,7 +54,7 @@ class ExampleTest extends TestCase
             'password' => 'test_password',
         ];
 
-        $response = $this->call('POST', 'api/register', $userData);
+        $response = $this->call('POST', 'api/auth/register', $userData);
 
         $this->assertEquals(200, $response->status());
         $this->assertNotNull(json_decode($response->getContent())->data);
@@ -72,7 +72,7 @@ class ExampleTest extends TestCase
             'password' => '123456',
         ];
 
-        $response = $this->call('POST', 'api/login', $loginData);
+        $response = $this->call('POST', 'api/auth/login', $loginData);
 
         $this->assertEquals(200, $response->status());
         $this->assertNotNull(json_decode($response->getContent())->data);
@@ -87,7 +87,7 @@ class ExampleTest extends TestCase
             'password' => '123456',
         ];
 
-        $response = $this->call('POST', 'api/login', $loginData);
+        $response = $this->call('POST', 'api/auth/login', $loginData);
 
         $this->assertEquals(404, $response->status());
         $response->assertJson([
@@ -105,7 +105,7 @@ class ExampleTest extends TestCase
             'password' => 'dont match',
         ];
 
-        $response = $this->call('POST', 'api/login', $loginData);
+        $response = $this->call('POST', 'api/auth/login', $loginData);
 
         $this->assertEquals(401, $response->status());
         $response->assertJson([

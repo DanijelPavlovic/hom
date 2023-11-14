@@ -18,9 +18,13 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['prefix' => 'api'], function () use ($router) {
-    $router->post('register', 'AuthController@register');
-    $router->post('login', 'AuthController@login');
-    $router->get('me', 'AuthController@me');
+
+    $router->group(['prefix' => 'auth'], function () use ($router) {
+        $router->post('register', 'AuthController@register');
+        $router->post('login', 'AuthController@login');
+        $router->get('me', 'AuthController@me');
+    });
+
 
     $router->group(['prefix' => 'category'], function () use ($router) {
         $router->get('', 'CategoryController@index');
