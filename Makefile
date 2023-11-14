@@ -1,4 +1,4 @@
-run:
+start:
 	 php -S localhost:8000 -t public
 
 start-db:
