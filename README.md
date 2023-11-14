@@ -6,7 +6,7 @@
 2. Run `composer install` command
 3. Run `make db-start` command to build the database inside a docker container
 4. Run `make migrations` command to create the tables inside the DB
-5. Run `make start` to run start the app
+5. Run `make start` to run the app
 
 <br>
 
