@@ -8,13 +8,20 @@
 4. Run `make migrations` command to create the tables inside the DB
 5. Run `make start` to run start the app
 
-> **Note:** If you wish to populate the databse with test data run the `make seed` command which will insert. To stop the DB container run the `make stop-db` command
+<br>
+
+> **Note:** To stop the DB container run the `make stop-db` command.
 
 ### Api Documentation
 
 Open Postman and impor the postman collection located in the root directory
 
 ### Testing
+
+> **Note:** If you wish to populate the databse with test data run the `make seed` command.
+> <br> <br>
+> This will generate a test user with the following credentials
+> <br> <br> _Email:_ testUser@local.tbd <br> _Password:_ 123456
 
 WIP
 

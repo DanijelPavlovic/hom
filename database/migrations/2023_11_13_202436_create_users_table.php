@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('email')->unique()->notNullable();
             $table->string('password');
-            $table->float('amount', 8, 2)->default(100);
+            $table->float('amount', 8, 2)->default(1000);
             $table->string('api_token', 80)
                 ->unique()
                 ->nullable()
