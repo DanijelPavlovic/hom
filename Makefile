@@ -4,6 +4,9 @@ start:
 start-db:
 	docker compose up -d
 
+stop-db:
+	docker compose down
+
 migrations:
 	php artisan migrate
 

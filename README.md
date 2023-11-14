@@ -8,7 +8,7 @@
 4. Run `make migrations` command to create the tables inside the DB
 5. Run `make start` to run start the app
 
-> **Note:** If you wish to populate the databse with test data run the `make seed` command which will insert
+> **Note:** If you wish to populate the databse with test data run the `make seed` command which will insert. To stop the DB container run the `make stop-db` command
 
 ### Api Documentation
 
