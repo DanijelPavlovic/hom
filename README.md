@@ -3,9 +3,9 @@
 ### Getting started
 
 1. Create an `.env` from `.env.example`
-2. Run `composer install` command
-3. Run `make db-start` command to build the database inside a docker container
-4. Run `make migrations` command to create the tables inside the DB
+2. Run `composer install`
+3. Run `make db-start` to build the database inside a docker container
+4. Run `make migrations` to create the tables inside the DB
 5. Run `make start` to run the app
 
 <br>
