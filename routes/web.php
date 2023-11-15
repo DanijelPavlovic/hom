@@ -29,16 +29,16 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->group(['prefix' => 'category'], function () use ($router) {
         $router->get('', 'CategoryController@index');
         $router->get('{id}', 'CategoryController@show');
-        $router->post('store', 'CategoryController@store');
-        $router->put('update/{id}', 'CategoryController@update');
+        $router->post('', 'CategoryController@store');
+        $router->put('{id}', 'CategoryController@update');
         $router->delete('{id}', 'CategoryController@destroy');
     });
 
     $router->group(['prefix' => 'expense'], function () use ($router) {
         $router->get('', 'ExpenseController@index');
         $router->get('{id}', 'ExpenseController@show');
-        $router->post('store', 'ExpenseController@store');
-        $router->put('update/{id}', 'ExpenseController@update');
+        $router->post('', 'ExpenseController@store');
+        $router->put('{id}', 'ExpenseController@update');
         $router->delete('{id}', 'ExpenseController@destroy');
     });
 
