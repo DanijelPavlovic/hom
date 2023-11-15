@@ -23,7 +23,11 @@ Open Postman and impor the postman collection located in the root directory
 > This will generate a test user with the following credentials
 > <br> <br> _Email:_ testUser@local.tbd <br> _Password:_ 123456
 
-WIP
+Tests are located inside the test folder (provided some basic endpoint and auth tests)
+<br>
+Run `make run-tests` command
+<br>
+**Expected outcome:** all tests should pass
 
 ## Official Laravel Documentation
 
