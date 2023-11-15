@@ -12,3 +12,6 @@ migrations:
 
 seed:
 	php artisan db:seed
+
+make run-tests:
+	vendor/bin/phpunit

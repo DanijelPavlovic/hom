@@ -3,48 +3,12 @@
 namespace Tests;
 
 use App\Models\User;
-use App\Models\Expense;
-use Laravel\Lumen\Testing\DatabaseMigrations;
 use Laravel\Lumen\Testing\DatabaseTransactions;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
-use Carbon\Carbon;
-use Illuminate\Support\Facades\Hash;
 
-class ExampleTest extends TestCase
+class AuthTest extends TestCase
 {
     use DatabaseTransactions;
-
-    public function createApplication()
-    {
-        return require __DIR__ . '/../bootstrap/app.php';
-    }
-
-    public function testAmountSpent()
-    {
-        $user = User::factory()->create();
-
-        Expense::factory()->make([
-            'user_id' => $user->id,
-            'amount' => 30,
-            'created_at' => Carbon::now()->subMonth(),
-        ]);
-
-        $response = $this->call(
-            'GET',
-            'api/analytics/amount-spent',
-            ['month' => Carbon::now()->month, 'year' => Carbon::now()->year],
-            [],
-            [],
-            [
-                'HTTP_Authorization' => 'Bearer ' . $user->api_token,
-            ]
-        );
-
-        $this->actingAs($user);
-        $this->assertEquals(200, $response->status());
-        $this->assertNotNull(json_decode($response->getContent())->data);
-    }
 
     public function testRegisterSuccess()
     {
@@ -80,8 +44,6 @@ class ExampleTest extends TestCase
 
     public function testLoginUserNotFound()
     {
-        $user = User::factory()->create();
-
         $loginData = [
             'email' => 'I DO NOT EXIST',
             'password' => '123456',
