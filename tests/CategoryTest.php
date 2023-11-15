@@ -23,7 +23,7 @@ class CategoryTest extends TestCase
 
         $response = $this->call(
             'POST',
-            'api/category/store',
+            'api/category',
             $testData,
             [],
             [],
